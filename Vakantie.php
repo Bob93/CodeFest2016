@@ -30,47 +30,15 @@
 
 <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">
-                <img src="http://placehold.it/150x50&text=Logo" alt="">
-            </a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li>
-                    <a href="#">Ziek</a>
-                </li>
-                <li>
-                    <a href="#">Vakantie</a>
-                </li>
-                <li>
-                    <a href="#">Uren</a>
-                </li>
-                <li>
-                    <a href="#">Overzicht</a>
-                </li>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
+    <?php include 'includes/MenuBar.php';?>
 </nav>
 
 <!-- Page Content -->
 <div class="container">
     <div class="row">
         <div class="col-lg-12">
-            <h1>GoedeMiddag   HIER KOMT DE GEBRUIKERS NAAM !!</h1>
-            <p>Note: You may need to adjust some CSS based on the size of your logo. The default logo size is 150x50 pixels.</p>
+            <h1>Vakantie</h1>
+            <p>Note: You may suck dick</p>
         </div>
     </div>
 </div>

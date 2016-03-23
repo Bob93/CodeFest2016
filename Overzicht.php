@@ -1,3 +1,13 @@
+<?php
+session_start();
+if (isset($_SESSION['page'])){ // als er een pagina gedefinieerd is
+    $pagina = $_SESSION['page'];	// wordt de variabele pagina gelijk aan de variable page in een sessie
+} else {
+    $pagina = 'overzicht';	// De default pagina is landing
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,7 +40,8 @@
 
 <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
+<div class="container">
+<div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -62,38 +73,14 @@
         </div>
         <!-- /.navbar-collapse -->
     </div>
-    <!-- /.container -->
 </nav>
 
 <!-- Page Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-12">
-            <h1>Overzicht</h1>
 
-        </div>
-    </div>
-</div>
 
 <!-- /.container -->
 <div class="container">
-    <div class="menu-info">
-        <div class="form-group">
-            Voornaam#uitdb <input type="text" name="Van-Datum" id="Van-Datum" tabindex="1" class="form-control" placeholder="#" value="">
-        </div>
-        <div class="form-group">
-            Achternaam#uitdb <input type="text" name="Tot-Datum" id="Tot-Datum" tabindex="2" class="form-control" placeholder="#" value="">
-        </div>
-        Periode<br><br><br>
-
-        <div class="form-group">
-            Van datum <input type="date" name="Van-Datum" id="Van-Datum1" tabindex="1" class="form-control" placeholder="Van" value="">
-        </div>
-        <div class="form-group">
-            Tot datum <input type="date" name="Tot-Datum" id="Tot-Datum1" tabindex="2" class="form-control" placeholder="Tot" value="">
-        </div>
-        <input type="submit" value="Submit">
-    </div>
+    <?php include 'includes/' . $pagina . '.inc.php';?>
 </div>
 <!-- jQuery -->
 <script src="js/jquery.js"></script>
