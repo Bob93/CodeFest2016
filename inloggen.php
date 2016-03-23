@@ -5,6 +5,17 @@ $wachtwoord = $_POST['wachtwoord'];
 
 include 'connector.php';
 
+function generateHash($wachtwoord) {
+    if (defined("CRYPT_BLOWFISH") && CRYPT_BLOWFISH) {
+        $salt =  '$2y$11$' . substr(md5(uniqid(rand(), true)), 0, 22);
+        return crypt($wachtwoord, $salt);
+    }
+}
+
+function verify($wachtwoord, $hashedWachtwoord) {
+    return crypt($wachtwoord, $hashedWachtwoord) == $hashedWachtwoord;
+}
+
 $sth = $dbh->prepare("SELECT * FROM  person WHERE gebruikersnaam=:gebruikersnaam AND wachtwoord=:wachtwoord");
 $sth->bindParam(':gebruikersnaam',$gebruikersnaam);
 $sth->bindParam(':wachtwoord',$wachtwoord);
