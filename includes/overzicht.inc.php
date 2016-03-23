@@ -1,3 +1,5 @@
+<?php
+echo '
 <div class="row">
         <div class="col-lg-12">
             <h1>Overzicht</h1>
@@ -6,7 +8,7 @@
     </div>
     <div class="menu-info">
         <div class="form-group">
-            <h1>Hallo <?php echo $_SESSION['voornaam'] . ' ' . $_SESSION['tussenvoegsel'] . $_SESSION['achternaam']; ?>!</h1>
+            <h1>Voornaam tussenvoegsel Achternaam #uitdb</h1>
 </div>
 
         <h2>Periode</h2><br>
@@ -18,4 +20,4 @@ Van datum <input type="date" name="Van-Datum" id="Van-Datum1" tabindex="1" class
 Tot datum <input type="date" name="Tot-Datum" id="Tot-Datum1" tabindex="2" class="form-control" placeholder="Tot" value="">
         </div>
 
-    </div>
+    </div> '; ?>

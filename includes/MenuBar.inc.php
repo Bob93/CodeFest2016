@@ -19,13 +19,13 @@ echo '<div class="container">
                     <a href="#">Ziek</a>
                 </li>
                 <li>
-                    <a href="#">Vakantie</a>
+                    <a href="../vakantie.php">Vakantie</a>
                 </li>
                 <li>
-                    <a href="#">Uren</a>
+                    <a href="uren.inc.php">Uren</a>
                 </li>
                 <li>
-                    <a href="#">Overzicht</a>
+                    <a href="overzicht.inc.php">Overzicht</a>
                 </li>
             </ul>
         </div>
