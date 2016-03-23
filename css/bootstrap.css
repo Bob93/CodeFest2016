@@ -1,3 +1,5 @@
+
+
 .menu-info {
     margin: auto;
     margin-top: 20px;
@@ -3450,6 +3452,7 @@ fieldset[disabled] .btn-link:focus {
   font-size: 18px;
   line-height: 1.3333333;
   border-radius: 6px;
+    min-width: 300px;
 }
 .btn-sm,
 .btn-group-sm > .btn {
