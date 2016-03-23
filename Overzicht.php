@@ -1,13 +1,6 @@
 <?php
 session_start();
-if (isset($_SESSION['page'])){ // als er een pagina gedefinieerd is
-    $pagina = $_SESSION['page'];	// wordt de variabele pagina gelijk aan de variable page in een sessie
-} else {
-    $pagina = 'overzicht';	// De default pagina is landing
-}
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,7 +21,7 @@ if (isset($_SESSION['page'])){ // als er een pagina gedefinieerd is
     <link href="css/logo-nav.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!-- WARNING: Respond.js doesnt work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -80,7 +73,7 @@ if (isset($_SESSION['page'])){ // als er een pagina gedefinieerd is
 
 <!-- /.container -->
 <div class="container">
-    <?php include 'includes/' . $pagina . '.inc.php';?>
+    <?php include 'includes/overzicht.inc.php';?>
 </div>
 <!-- jQuery -->
 <script src="js/jquery.js"></script>
