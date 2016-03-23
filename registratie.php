@@ -16,7 +16,7 @@ if(count($_POST)>0){
 
         // Validatie voor checkbox
         if(!isset($error) && !isset($_POST['geslacht'])){
-            $error = "Selecteer een geslact";
+            $error = "Selecteer een geslacht";
         }
 
         if(!isset($error)){
@@ -83,12 +83,18 @@ include 'includes/header.inc.php';
                 <tr>
                     <td><p>Gebruikersnaam</p></td>
                     <td>
-                        <input type="gebruikersnaam"  name="" value="<?php if(isset($_POST['gebruikersnaam'])) echo $_POST['gebruikersnaam'];?>" class="inp_box">
+                        <input type="gebruikersnaam"  name="gebruikersnaam" class="inp_box" value="<?php if(isset($_POST['gebruikersnaam'])) echo $_POST['gebruikersnaam'];?>">
+                </tr>
+                <tr>
+                    <td><p>Wachtwoord</p></td>
+                    <td>
+                        <input type="password" name="wachtwoord" class="inp_box" value="<?php if(isset($_POST['gebruikersnaam'])) echo $_POST['gebruikersnaam'];?>">
+                    </td>
                 </tr>
                 <tr>
                     <td><p>Wachtwoord herhalen</p></td>
                     <td>
-                        <input type="password" name="wachtwoord_herhaling" value="<?php if(isset($_POST['wachtwoord_herhaling'])) echo $_POST['wachtwoord_herhaling'];?>" class="inp_box">
+                        <input type="password" name="wachtwoord_herhaling" class="inp_box" value="<?php if(isset($_POST['wachtwoord_herhaling'])) echo $_POST['wachtwoord_herhaling'];?>">
                     </td>
                 </tr>
                 <tr>
@@ -102,18 +108,16 @@ include 'includes/header.inc.php';
                     <td>
                         <input type="radio" name="geslacht" value="M"
                                <?php if(isset($_POST['geslacht']) && $_POST['geslacht']=='M'):?>checked<?php endif ?> >M
-                        <input type="radio" name="geslacht" value="F"
-                               <?php if(isset($_POST['geslacht']) && $_POST['geslacht']=='F'):?>checked<?php endif ?>>F
+                        <input type="radio" name="geslacht" value="V"
+                               <?php if(isset($_POST['geslacht']) && $_POST['geslacht']=='V'):?>checked<?php endif ?>>V
                     </td>
                 </tr>
                 <tr>
                     <td colspan="2">
                         <input type="submit" value="registreren" name="submit" class="sub_btn">
                     </td>
-
                 </tr>
             </table>
-
         </form>
     </body>
 </html>
