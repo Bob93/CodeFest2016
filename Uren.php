@@ -34,18 +34,11 @@
 </nav>
 
 <!-- Page Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-10">
-            <h1>Uren</h1>
 
-        </div>
-    </div>
-</div>
 
 <!-- /.container -->
 <div class="container">
-    <?php include 'includes/uren.inc.php';?>
+    <?php include 'includes/manager.php';?>
 </div>
 <!-- jQuery -->
 <script src="js/jquery.js"></script>
