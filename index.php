@@ -1,3 +1,7 @@
+<?php include  'connector.php';
+
+echo var_dump($dbh);?>
+
 <!DOCTYPE html>
 <html>
 <head>
