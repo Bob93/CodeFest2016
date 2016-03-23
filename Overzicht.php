@@ -1,13 +1,9 @@
 <?php
 session_start();
-if (isset($_SESSION['page'])){ // als er een pagina gedefinieerd is
-    $pagina = $_SESSION['page'];	// wordt de variabele pagina gelijk aan de variable page in een sessie
-} else {
-    $pagina = 'overzicht';	// De default pagina is landing
+if(!isset($_SESSION['login'])) {
+    header("location: index.php");
 }
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -80,7 +76,7 @@ if (isset($_SESSION['page'])){ // als er een pagina gedefinieerd is
 
 <!-- /.container -->
 <div class="container">
-    <?php include 'includes/' . $pagina . '.inc.php';?>
+    <?php include 'includes/' . $_SESSION['login'] . '.inc.php';?>
 </div>
 <!-- jQuery -->
 <script src="js/jquery.js"></script>

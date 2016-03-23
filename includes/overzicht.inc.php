@@ -1,23 +1,30 @@
-<?php
-echo '
+
 <div class="row">
         <div class="col-lg-12">
-            <h1>Overzicht</h1>
+            <h1>Welkom <?php echo $_SESSION['voornaam']; ?>!</h1>
 
         </div>
     </div>
     <div class="menu-info">
         <div class="form-group">
-            <h1>Voornaam tussenvoegsel Achternaam #uitdb</h1>
+
 </div>
 
-        <h2>Periode</h2><br>
+        <h3>Periode</h3><br>
 
-        <div class="form-group">
-Van datum <input type="date" name="Van-Datum" id="Van-Datum1" tabindex="1" class="form-control" placeholder="Van" value="">
-        </div>
-        <div class="form-group">
-Tot datum <input type="date" name="Tot-Datum" id="Tot-Datum1" tabindex="2" class="form-control" placeholder="Tot" value="">
-        </div>
+        <form class="form-group" action="verlofaanvraag.php" method="post" role="form">
+            Type Verlof:<br/>
+            <select name="type_Verlof">
+                <option value="Vakantie">Vakantie</option>
+                <option value="Ziekte">Ziekte</option>
+                <option value="Bijzonder verlof">Bijzonder Verlof</option>
+            </select><br/>
+Van Datum: <input type="date" name="vandatum" id="Van-Datum1" tabindex="1" class="form-control" placeholder="Van" value="">
+Tot Datum: <input type="date" name="totdatum" id="Tot-Datum1" tabindex="2" class="form-control" placeholder="Tot" value="">
+           <button type="submit" value="Submit">Submitje</button>
+        </form>
 
-    </div> '; ?>
+        <form action="uitloggen.php" method="get">
+        <button type="submit">Uitloggen</button>
+        </form>
+    </div>

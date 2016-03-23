@@ -30,7 +30,7 @@
 
 <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <?php include 'includes/MenuBar.inc.php';?>
+    <?php include 'includes/menubar.inc.php';?>
 </nav>
 
 <!-- Page Content -->
