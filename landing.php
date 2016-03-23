@@ -1,6 +1,4 @@
-<?php include  'connector.php';
-
-echo var_dump($dbh);?>
+<?php include  'connector.php';?>
 
 <!DOCTYPE html>
 <html>
@@ -32,12 +30,12 @@ echo var_dump($dbh);?>
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-lg-12">
-                            <form id="login-form" action="http://phpoll.com/login/process" method="post" role="form" style="display: block;">
+                            <form id="login-form" action="inloggen.php" method="post" role="form" style="display: block;">
                                 <div class="form-group">
-                                    <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+                                    <input type="text" name="gebruikersnaam" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+                                    <input type="password" name="wachtwoord" id="password" tabindex="2" class="form-control" placeholder="Password">
                                 </div>
                                 <div class="form-group text-center">
                                     <input type="checkbox" tabindex="3" class="" name="remember" id="remember">
