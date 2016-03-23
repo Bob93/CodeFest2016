@@ -1,4 +1,10 @@
 <div class="menu-info">
+    <div class="row">
+        <div class="col-lg-10">
+            <h1>Uren</h1>
+
+        </div>
+    </div>
     <div class="dropdown">
         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Broject
             <span class="caret"></span></button>
