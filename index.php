@@ -10,6 +10,7 @@ echo var_dump($dbh);?>
     <link href="css/bootstrap.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="css/logo-nav.css" rel="stylesheet">
+    <link href="css/grayscale.css" rel="stylesheet">
 </head>
 
 <body>
