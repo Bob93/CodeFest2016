@@ -5,5 +5,3 @@ if (isset($_SESSION['login'])){
 } else {
     header("location: landing.php");
 }
-?>
-
