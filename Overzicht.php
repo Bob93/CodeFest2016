@@ -5,10 +5,6 @@ if(!isset($_SESSION['login'])) {
 }
 
 include 'connector.php';
-
-checkType($_SESSION['type_ID'], 1);
-checkType($_SESSION['type_ID'], 2);
-checkType($_SESSION['type_ID'], 3);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -50,15 +46,10 @@ checkType($_SESSION['type_ID'], 3);
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">
-                    <img src="http://placehold.it/150x50&text=Logo" alt="">
-                </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <?php if($_SESSION['type_ID'] == 1) {
-                    echo '
                         <li>
                             <a href="#">Ziek</a>
                         </li>
@@ -70,9 +61,9 @@ checkType($_SESSION['type_ID'], 3);
                         </li>
                         <li>
                             <a href="#">Overzicht</a>
-                        </li>';
-                    } else if($_SESSION['type_ID'] == 2) {
-                    echo '
+                        </li>
+                        <?php if($_SESSION['type_ID'] == 2) {
+                        echo '
                         <li>
                             <a href="#">Werknemertoevoegen</a>
                         </li>
@@ -88,9 +79,7 @@ checkType($_SESSION['type_ID'], 3);
                         <li>
                             <a href="#">Parameters</a>
                         </li>';
-                    } else if($_SESSION['type_ID'] == 3) {
-                    echo '';
-                    }; echo '
+                    };?>'
                 </ul>
 
             </div>
@@ -102,7 +91,7 @@ checkType($_SESSION['type_ID'], 3);
 
         <!-- /.container -->
         <div class="container">
-            '; include 'includes/' . $_SESSION['login'] . '.inc.php'; echo '
+            <?php include 'includes/' . $_SESSION['login'] . '.inc.php';?>
         </div>
         <!-- jQuery -->
         <script src="js/jquery.js"></script>
