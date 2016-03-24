@@ -29,7 +29,7 @@ if ($sth->rowCount() == 1){
     $_SESSION['werknemernummer'] = $result['werknemernummer'];
     $_SESSION['type_ID'] = $result['type_ID'];
     // ik wil pushen
-    $_SESSION['login'] = 'overzicht';
+    $_SESSION['login'] = 'verlof';
     echo 'goedzo';
     header("location: index.php");
 }else{

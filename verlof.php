@@ -51,10 +51,7 @@ include 'connector.php';
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                         <li>
-                            <a href="#">Ziek</a>
-                        </li>
-                        <li>
-                            <a href="#">Vakantie</a>
+                            <a href="#">Verlof</a>
                         </li>
                         <li>
                             <a href="#">Uren</a>

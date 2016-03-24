@@ -25,11 +25,11 @@ echo '<div class="container">
                     <a href="uren.inc.php">Uren</a>
                 </li>
                 <li>
-                    <a href="overzicht.inc.php">Overzicht</a>
+                    <a href="verlof.inc.php">Overzicht</a>
                 </li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
     </div>
-    <!-- /.container -->' ;
+    <!-- /.container -->';
 ?>
