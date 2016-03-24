@@ -5,6 +5,9 @@
 		echo $e->getMessage();	// Als het niet lukt geeft hij een foutmelding
 	}
 	
+checkType($_SESSION['type_ID'], 1);
+checkType($_SESSION['type_ID'], 2);
+checkType($_SESSION['type_ID'], 3);
 
 function checkType($user_role, $check_role){
 	if($user_role == $check_role){
