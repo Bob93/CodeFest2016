@@ -1,6 +1,6 @@
 <?php
 	try{
-		$dbh = new PDO("mysql:host=localhost:3306;dbname=overzicht_test","root","12345678"); // connectie met database
+		$dbh = new PDO("mysql:host=localhost:3306;dbname=overzicht_test","root",""); // connectie met database
 	}catch(PDOException $e){
 		echo $e->getMessage();	// Als het niet lukt geeft hij een foutmelding
 	}

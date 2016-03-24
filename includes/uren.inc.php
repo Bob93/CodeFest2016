@@ -1,3 +1,4 @@
+<?php include "../connector.php";?>
 <div class="menu-info">
     <div class="row">
         <div class="col-lg-10">
