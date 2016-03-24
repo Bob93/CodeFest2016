@@ -66,6 +66,7 @@ if(!isset($_SESSION['login'])) {
                     <a href="#">Overzicht</a>
                 </li>
             </ul>
+            
         </div>
         <!-- /.navbar-collapse -->
     </div>
