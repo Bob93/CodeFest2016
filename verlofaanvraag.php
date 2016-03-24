@@ -14,8 +14,8 @@ $werknemernummer = $_SESSION['werknemernummer'];
 
 
 
-$sth = $dbh->prepare("INSERT INTO ziekte_en_verlof(type_Verlof, van_Datum, tot_Datum, werknemernummer)
-VALUES (:type_Verlof, :van_Datum, :tot_Datum, :werknemernummer)");
+$sth = $dbh->prepare("INSERT INTO ziekte_en_verlof(type_Verlof, van_Datum, tot_Datum, werknemernummer, akkoord, verwijderd)
+VALUES (:type_Verlof, :van_Datum, :tot_Datum, :werknemernummer, 0, 0)");
 $sth->bindParam(':type_Verlof',$type_Verlof);
 $sth->bindParam(':van_Datum',$van_Datum);
 $sth->bindParam(':tot_Datum',$tot_Datum);
