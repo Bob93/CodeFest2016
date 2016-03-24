@@ -4,7 +4,6 @@
 	}catch(PDOException $e){
 		echo $e->getMessage();	// Als het niet lukt geeft hij een foutmelding
 	}
-	
 
 function checkType($user_role, $check_role){
 	if($user_role == $check_role){
