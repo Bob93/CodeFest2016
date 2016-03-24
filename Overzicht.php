@@ -3,6 +3,12 @@ session_start();
 if(!isset($_SESSION['login'])) {
     header("location: index.php");
 }
+
+include 'connector.php';
+
+checkType($_SESSION['type_ID'], 1);
+checkType($_SESSION['type_ID'], 2);
+checkType($_SESSION['type_ID'], 3);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -66,7 +72,22 @@ if(!isset($_SESSION['login'])) {
                             <a href="#">Overzicht</a>
                         </li>';
                     } else if($_SESSION['type_ID'] == 2) {
-                    echo '';
+                    echo '
+                        <li>
+                            <a href="#">Werknemertoevoegen</a>
+                        </li>
+                        <li>
+                            <a href="#">Werknemer updaten</a>
+                        </li>
+                        <li>
+                            <a href="#">Werknemer verwijderen</a>
+                        </li>
+                        <li>
+                            <a href="#">Overzichten</a>
+                        </li>
+                        <li>
+                            <a href="#">Parameters</a>
+                        </li>';
                     } else if($_SESSION['type_ID'] == 3) {
                     echo '';
                     }; echo '
