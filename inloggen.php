@@ -16,7 +16,7 @@ include 'connector.php';
 //    return crypt($wachtwoord, $hashedWachtwoord) == $hashedWachtwoord;
 //}
 
-$sth = $dbh->prepare("SELECT voornaam, tussenvoegsel, achternaam, werknemernummer FROM  person WHERE gebruikersnaam=:gebruikersnaam AND wachtwoord=:wachtwoord");
+$sth = $dbh->prepare("SELECT voornaam, tussenvoegsel, achternaam, werknemernummer, type_ID FROM  person WHERE gebruikersnaam=:gebruikersnaam AND wachtwoord=:wachtwoord");
 $sth->bindParam(':gebruikersnaam',$gebruikersnaam);
 $sth->bindParam(':wachtwoord',$wachtwoord);
 $sth->execute();
@@ -27,6 +27,8 @@ if ($sth->rowCount() == 1){
     $_SESSION['tussenvoegsel'] = $result['tussenvoegsel'];
     $_SESSION['achternaam'] = $result['achternaam'];
     $_SESSION['werknemernummer'] = $result['werknemernummer'];
+    $_SESSION['type_ID'] = $result['type_ID'];
+    // ik wil pushen
     $_SESSION['login'] = 'overzicht';
     echo 'goedzo';
     header("location: index.php");
