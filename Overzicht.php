@@ -3,6 +3,12 @@ session_start();
 if(!isset($_SESSION['login'])) {
     header("location: index.php");
 }
+
+include 'connector.php';
+
+checkType($_SESSION['type_ID'], 1);
+checkType($_SESSION['type_ID'], 2);
+checkType($_SESSION['type_ID'], 3);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,59 +37,78 @@ if(!isset($_SESSION['login'])) {
     <![endif]-->
 
 </head>
-
 <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+    <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img src="http://placehold.it/150x50&text=Logo" alt="">
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <?php if($_SESSION['type_ID'] == 1) {
+                    echo '
+                        <li>
+                            <a href="#">Ziek</a>
+                        </li>
+                        <li>
+                            <a href="#">Vakantie</a>
+                        </li>
+                        <li>
+                            <a href="#">Uren</a>
+                        </li>
+                        <li>
+                            <a href="#">Overzicht</a>
+                        </li>';
+                    } else if($_SESSION['type_ID'] == 2) {
+                    echo '
+                        <li>
+                            <a href="#">Werknemertoevoegen</a>
+                        </li>
+                        <li>
+                            <a href="#">Werknemer updaten</a>
+                        </li>
+                        <li>
+                            <a href="#">Werknemer verwijderen</a>
+                        </li>
+                        <li>
+                            <a href="#">Overzichten</a>
+                        </li>
+                        <li>
+                            <a href="#">Parameters</a>
+                        </li>';
+                    } else if($_SESSION['type_ID'] == 3) {
+                    echo '';
+                    }; echo '
+                </ul>
 
-<!-- Navigation -->
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-<div class="container">
-<div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">
-                <img src="http://placehold.it/150x50&text=Logo" alt="">
-            </a>
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li>
-                    <a href="#">Ziek</a>
-                </li>
-                <li>
-                    <a href="#">Vakantie</a>
-                </li>
-                <li>
-                    <a href="#">Uren</a>
-                </li>
-                <li>
-                    <a href="#">Overzicht</a>
-                </li>
-            </ul>
+    </nav>
+        <!-- Page Content -->
+
+
+        <!-- /.container -->
+        <div class="container">
+            '; include 'includes/' . $_SESSION['login'] . '.inc.php'; echo '
         </div>
-        <!-- /.navbar-collapse -->
-    </div>
-</nav>
+        <!-- jQuery -->
+        <script src="js/jquery.js"></script>
 
-<!-- Page Content -->
-
-
-<!-- /.container -->
-<div class="container">
-    <?php include 'includes/' . $_SESSION['login'] . '.inc.php';?>
-</div>
-<!-- jQuery -->
-<script src="js/jquery.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
-
-</body>
-
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+    </body>
 </html>
+';
