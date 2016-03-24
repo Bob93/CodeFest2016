@@ -42,7 +42,7 @@ if(count($_POST)>0){
             $sth->bindParam(':deeltijdfactor', $deeltijdfactor = 1);
             $sth->bindParam(':afdeling_ID', $afdeling_ID = 1);
             $sth->bindParam(':type_ID', $type_ID = 1);
-            $sth->bindParam(':datum_in_dienst', $datum_in_dienst = date('Y-m-d'));
+            $sth->bindParam(':datum_in_dienst', $datum_in_dienst = date('Y-m-d '));
             $sth->execute();
         if($sth){
             echo "Succesvol geregistreerd";
@@ -109,10 +109,10 @@ include 'includes/header.inc.php';
                 <tr>
                     <td><p>Geslacht</p></td>
                     <td>
-                        <input type="radio" name="geslacht" value="M"
-                               <?php if(isset($_POST['geslacht']) && $_POST['geslacht']=='M'):?>checked<?php endif ?> >M
-                        <input type="radio" name="geslacht" value="V"
-                               <?php if(isset($_POST['geslacht']) && $_POST['geslacht']=='V'):?>checked<?php endif ?>>V
+                        <input type="radio" name="geslacht" value="m"
+                               <?php if(isset($_POST['geslacht']) && $_POST['geslacht']=='m'):?>checked<?php endif ?> >M
+                        <input type="radio" name="geslacht" value="v"
+                               <?php if(isset($_POST['geslacht']) && $_POST['geslacht']=='v'):?>checked<?php endif ?>>V
                     </td>
                 </tr>
                 <tr>
