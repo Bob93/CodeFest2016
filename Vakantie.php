@@ -4,11 +4,7 @@ include 'includes/header.inc.php';
 ?>
 
 <body>
-
-<!-- Navigation -->
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <?php include 'includes/menubar.inc.php';?>
-</nav>
+<?php include 'includes/navigatie.inc.php';?>
 
 <!-- Page Content -->
 <div class="container">

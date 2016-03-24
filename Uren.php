@@ -38,7 +38,7 @@
 
 <!-- /.container -->
 <div class="container">
-    <?php include 'includes/manager.php';?>
+    <?php include 'includes/manager.inc.php';?>
 </div>
 <!-- jQuery -->
 <script src="js/jquery.js"></script>

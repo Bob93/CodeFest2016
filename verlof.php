@@ -34,7 +34,7 @@ include 'connector.php';
 
 </head>
 <body>
-        <?php include 'includes/navigatie.php'; ?>
+        <?php include 'includes/navigatie.inc.php'; ?>
 
         <!-- Page Content -->
 
