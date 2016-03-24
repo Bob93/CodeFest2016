@@ -1,3 +1,6 @@
+
+
+
 <?php
 include 'connector.php';
 
@@ -53,6 +56,8 @@ if(count($_POST)>0){
 include 'includes/header.inc.php';
 ?>
     <body>
+    <div class="menu-info">
+        <div class="row">
         <form name="registratie" method="POST" action="registratie.php">
             <table border="0" cellspacing="15px">
                 <tr>
@@ -122,6 +127,8 @@ include 'includes/header.inc.php';
                 </tr>
             </table>
         </form>
+        </div>
+        </div>
     </body>
 </html>
 
