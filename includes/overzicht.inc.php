@@ -21,7 +21,7 @@
             </select><br/>
 Van Datum: <input type="date" name="vandatum" id="Van-Datum1" tabindex="1" class="form-control" placeholder="Van" value="">
 Tot Datum: <input type="date" name="totdatum" id="Tot-Datum1" tabindex="2" class="form-control" placeholder="Tot" value="">
-           <button type="submit" value="Submit">Submitje</button>
+            PDO::FETCH_ASSOCPDO::FETCH_ASSOCPDO::FETCH_ASSOCPDO::FETCH_ASSOC
         </form>
 
         <form action="uitloggen.php" method="get">

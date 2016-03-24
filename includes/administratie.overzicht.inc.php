@@ -1,13 +1,10 @@
+
+
+
 <?php include "../connector.php";
 
-$sth = $dbh ->prepare("SELECT voornaam, tussenvoegsel, achternaam, afdeling FROM person WHERE
-     voornaam=:voornaam, tussenvoegsel=:tussenvoegsel, achternaam=:achternaam, afdeling=:afdeling;");
-    $sth->bindParam('voornaam',$voornaam);
-    $sth->bindParam('tussenvoegsel',$tussenvoegsel);
-    $sth->bindParam('achternaam',$achternaam);
-    $sth->bindParam('afdeling',$afdeling);
+$sth = $dbh ->prepare("SELECT voornaam, tussenvoegsel, achternaam, afdeling.beschrijving  FROM person INNER JOIN afdeling ON person.afdeling_ID=afdeling.afdeling_ID ");
     $sth->execute();
-
 
 
 echo "<table border='1'>
@@ -18,16 +15,15 @@ echo "<table border='1'>
 <th>afdeling</th>
 </tr>";
 
-while($row = mysqli_fetch_array($sth))
+while($person = $sth->fetch(PDO::FETCH_ASSOC))
 {
     echo "<tr>";
-    echo "<td>" . $row['voornaam'] . "</td>";
-    echo "<td>" . $row['tussenvoegsel'] . "</td>";
-    echo "<td>" . $row['achternaam'] . "</td>";
-    echo "<td>" . $row['afdeling'] . "</td>";
+    echo "<td>" . $person['voornaam'] . "</td>";
+    echo "<td>" . $person['tussenvoegsel'] . "</td>";
+    echo "<td>" . $person['achternaam'] . "</td>";
+    echo "<td>" . $person['beschrijving'] . "</td>";
     echo "</tr>";
 }
 echo "</table>";
-
 
 ?>
